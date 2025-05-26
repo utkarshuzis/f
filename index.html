@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Framer site embedded in a mobile-optimized iframe" />
-  <title>Framer Embed</title>
+  <meta name="description" content="Fast, mobile-optimized Framer site" />
+  <title>Your Framer Site</title>
+  <link rel="preconnect" href="https://courageous-today-639401.framer.app">
+  <link rel="dns-prefetch" href="https://courageous-today-639401.framer.app">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
-      background-color: #ffffff;
+      background: #fff;
     }
     iframe {
-      border: none;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
+      border: none;
       display: block;
     }
   </style>
@@ -24,8 +29,9 @@
 <body>
   <iframe 
     src="https://courageous-today-639401.framer.app/" 
-    loading="lazy" 
-    allow="fullscreen; geolocation; microphone; camera"
+    loading="eager"
+    allowfullscreen
+    allow="fullscreen; camera; microphone; geolocation"
   ></iframe>
 </body>
 </html>
